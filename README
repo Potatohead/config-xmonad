@@ -1,0 +1,5 @@
+My xmonad config files
+
+link it into .xmonad and then use xmonad.start with a /usr/share/xsessions file
+to give you an xmonad desktop. Make sure xmonad and xmobar are both installed
+before you begin
