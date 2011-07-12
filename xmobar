@@ -10,13 +10,12 @@ Config { font = "xft:Fixed-8"
 ---      , position = Top
       , position = TopW L 85
       , lowerOnStart = True
-      , commands = [ Run Weather "YBBN" ["-t","<tempC>C <skyCondition>","-L","64","-H","77","--normal","#CEFFAC","--high","#FFB6B0","--low","#96CBFE"] 36000
-                   , Run Cpu ["-L","3","-H","50","--normal","#CEFFAC","--high","#FFB6B0"] 10
-                   , Run MultiCpu ["-t","Cpu:<total0><total1>","-L","3","-H","50","--normal","#CEFFAC","--high","#FFB6B0","-w","5"] 10
-                   , Run Memory ["-t","Mem: <usedratio>%"] 10
-                   , Run Swap [] 10
-                   , Run Network "eth0" ["-t","Net: <rx>, <tx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 5
-                   , Run Network "wlan0" ["-t","WNet: <rx>, <tx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 5
+      , commands = [ Run Cpu ["-L","3","-H","50","--normal","#CEFFAC","--high","#FFB6B0"] 10
+                   , Run MultiCpu ["-t","<total0><total1>","-L","3","-H","50","--normal","#CEFFAC","--high","#FFB6B0","-w","5"] 10
+                   , Run Memory ["-t","<usedratio>%"] 10
+                   , Run Swap ["-t","<usedratio>%"] 10
+                   , Run Network "eth0" ["-t","<rx>, <tx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 5
+                   , Run Network "wlan0" ["-t","<rx>, <tx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 5
 ---                   , Run Wireless "wlan0" ["-t", "WNet: <essid>, <quality>, <qualitybar>"] 5
 ---                   , Run Wireless "wlan0" [] 5
                    , Run Date "%a %b %_d %l:%M" "date" 10
@@ -25,6 +24,6 @@ Config { font = "xft:Fixed-8"
                    ]
       , sepChar = "%"
       , alignSep = "}{"
-      , template = "%StdinReader% }{ %multicpu% | %memory% * %swap% | %wlan0% | %YBBN% | <fc=#FFFFCC>%date%</fc>"
+      , template = "%StdinReader% }{ %multicpu% | %memory% * %swap% | %wlan0% | <fc=#FFFFCC>%date%</fc>"
       }
 
