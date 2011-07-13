@@ -6,11 +6,11 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true --expa
 
 #gnome-screensaver
 
-if [ -x /usr/bin/gnome-volume-control-applet]; then
+if [ -x /usr/bin/gnome-volume-control-applet ] ; then
   gnome-volume-control-applet &
 fi
 
-if [ -x /usr/bin/gnome-settings-daemon] ; then
+if [ -x /usr/bin/gnome-settings-daemon ] ; then
   gnome-settings-daemon &
 fi
 
