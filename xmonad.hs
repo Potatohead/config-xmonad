@@ -57,7 +57,7 @@ myNumlockMask   = mod2Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["1:code","2:web","3:msg","4:vm","5:media","6","7","8","9"]
+myWorkspaces    = ["1:code","2:web","3:msg","4:mail","5:media","6","7","8","9"]
  
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -236,12 +236,11 @@ myManageHook = composeAll
     , className =? "Emacs"          --> doShift "1:code"
     , className =? "Google-chrome"  --> doShift "2:web"
     , className =? "firefox-bin"    --> doShift "2:web"
-    , className =? "Thunderbird-bin" --> doShift "3:msg"
     , className =? "Pidgin"         --> doShift "3:msg"
-    , className =? "VirtualBox"     --> doShift "4:vm"
+    , className =? "Xchat"          --> doShift "3:msg"
+    , className =? "Thunderbird-bin" --> doShift "4:mail"
     , className =? "banshee-1"      --> doShift "5:media"
     , className =? "Ktorrent"       --> doShift "5:media"
-    , className =? "Xchat"          --> doShift "5:media"
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
  
