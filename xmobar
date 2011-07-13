@@ -21,9 +21,10 @@ Config { font = "xft:Fixed-8"
                    , Run Date "%a %b %_d %l:%M" "date" 10
                    , Run Battery [] 30
                    , Run StdinReader
+                   , Run Com "cat" ["~/.statnot/notification.pipe"] "stat" 10
                    ]
       , sepChar = "%"
       , alignSep = "}{"
-      , template = "%StdinReader% }{ %multicpu% | %memory% * %swap% | %wlan0% | <fc=#FFFFCC>%date%</fc>"
+      , template = "%StdinReader% }{ %stat% | %multicpu% | %memory% * %swap% | %wlan0% | <fc=#FFFFCC>%date%</fc>"
       }
 
