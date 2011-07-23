@@ -242,6 +242,7 @@ myManageHook = composeAll
     , className =? "banshee-1"      --> doShift "5:media"
     , className =? "clementine"     --> doShift "5:media"
     , className =? "Ktorrent"       --> doShift "5:media"
+    , className =? "npviewer.bin"   --> doShift "6"
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
  

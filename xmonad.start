@@ -27,6 +27,11 @@ if [ -x /usr/bin/xfce4-volumed ] ; then
   xfce4-volumed &
 fi
 
+if [ -x /usr/local/bin/statnot ] ; then
+  killall xfce4-notifyd
+  statnot ~/.statnot/config.py &
+fi
+
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
 fi
