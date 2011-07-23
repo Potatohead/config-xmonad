@@ -28,8 +28,9 @@ if [ -x /usr/bin/xfce4-volumed ] ; then
 fi
 
 if [ -x /usr/local/bin/statnot ] ; then
-  killall xfce4-notifyd
   statnot ~/.statnot/config.py &
+  killall xfce4-notifyd
+  killall notify-osd 
 fi
 
 if [ -x /usr/bin/nm-applet ] ; then
