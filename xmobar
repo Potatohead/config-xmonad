@@ -25,6 +25,6 @@ Config { font = "xft:Fixed-8"
                    ]
       , sepChar = "%"
       , alignSep = "}{"
-      , template = "%StdinReader% }{ %stat% | %multicpu% | %memory% * %swap% | %wlan0% | <fc=#FFFFCC>%date%</fc>"
+      , template = "%StdinReader% }{ %stat% | %multicpu% | %memory% * %swap% | %eth0% | %wlan0% | <fc=#FFFFCC>%date%</fc>"
       }
 
